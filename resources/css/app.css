@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+    --color-mosque: #526b3a;
+    --color-mosque-dark: #34462d;
+    --color-mosque-pale: #f0f3e7;
+    --color-sand: #f8f6ee;
+}
+
+body {
+    background: #fcfcfa;
+}
+
+.hero-panel {
+    background:
+        radial-gradient(circle at 82% 25%, rgb(230 235 207 / 75%), transparent 26%),
+        linear-gradient(110deg, #f8f6ee 0%, #f5f4e9 57%, #e8edda 100%);
+}
+
+.mosque-art {
+    background: linear-gradient(145deg, #708452, #405533);
+}
+
+.soft-shadow {
+    box-shadow: 0 16px 48px rgb(38 51 31 / 7%);
+}
+
+@media print {
+    header,
+    footer,
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+}
